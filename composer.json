@@ -1,0 +1,21 @@
+{
+    "name": "expressif/http",
+    "description": "http implementation with expressif streams",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ioan CHIRIAC",
+            "email": "i.chiriac@yahoo.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "expressif/socket": "0.0.2",
+        "ext-http": ">=2.1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Expressif\\Http\\": "src"
+        }
+    }
+}
