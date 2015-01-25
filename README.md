@@ -11,12 +11,12 @@ This library use expressif/stream and http module :
 - libevent
 - pecl_http
 
-If you are on windows (for dev & test purpose) you can dirrectly (install pre-built libraries)[https://github.com/expressif/win-dist].
+If you are on windows (for dev & test purpose) you can dirrectly [install pre-built libraries](https://github.com/expressif/win-dist).
 
 ---
 
-**NOTE : ** if you plan to use this library on a multi-core server, you should consider
-(expressif/cluster)[https://github.com/expressif/cluster]
+*NOTE :* if you plan to use this library on a multi-core server, you should consider
+[expressif/cluster](https://github.com/expressif/cluster)
 
 ## usage
 
