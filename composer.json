@@ -8,9 +8,9 @@
             "email": "i.chiriac@yahoo.com"
         }
     ],
-    "minimum-stability": "beta",
+    "minimum-stability": "dev",
     "require": {
-        "expressif/socket": "0.0.2",
+        "expressif/socket": "dev-master",
         "ext-http": ">=2.1.0"
     },
     "autoload": {

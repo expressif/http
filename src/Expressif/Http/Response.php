@@ -66,7 +66,7 @@ namespace Expressif\Http {
       if ($this->chunked) {
         $chunk = dechex(strlen($chunk)) . "\r\n$chunk\r\n";
       }
-      $this->connection->send($chunk);
+      $this->connection->write($chunk);
       return $this;
     }
     /**
@@ -88,11 +88,13 @@ namespace Expressif\Http {
      * Send data and end the connection
      */
     public function end($data = null) {
+      $this->connection->on('write', function() {
+        $this->connection->close();
+      });
       $this->write($data);
       if ($this->chunked && !empty($data)) {
-        $this->connection->send("0\r\n\r\n");
+        $this->connection->write("0\r\n\r\n");
       }
-      $this->connection->close();
       return $this;
     }
   }
