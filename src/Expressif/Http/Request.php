@@ -14,6 +14,7 @@ namespace Expressif\Http {
     private $body = false;
     public $cookies = [];
     public $headers = [];
+    public $get = [];
     public $params = [];
     public $method;
     public $url;
@@ -51,6 +52,7 @@ namespace Expressif\Http {
             $this->path = $parts[0];
             if (!empty($parts[1])) {
               parse_str($parts[1], $this->params);
+              parse_str($parts[1], $this->get);
             }
             if (!empty($this->headers['cookie'])) {
               $parts = http_parse_cookie($this->headers['cookie']);
