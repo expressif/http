@@ -10,7 +10,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "expressif/socket": "dev-master",
+        "expressif/socket": "0.0.4",
         "ext-http": ">=2.1.0"
     },
     "autoload": {
