@@ -10,8 +10,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "expressif/socket": "0.0.5",
-        "ext-http": ">=2.1.0"
+        "expressif/socket": "0.0.5"
     },
     "autoload": {
         "psr-0": {

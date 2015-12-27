@@ -34,6 +34,7 @@ namespace Expressif\Http {
      */
     public function emit($event, array $args = []) {
       if ($event === 'data') {
+        echo '<< ' . $args[0];
         $this->buffer .= $args[0];
         if ($this->body === false) {
           // headers are not already parsed
@@ -41,7 +42,7 @@ namespace Expressif\Http {
             $this->body = true;
             $this->buffer = explode("\r\n\r\n", $this->buffer, 2);
 
-            $parts = new \http\Message($this->buffer[0]);
+            $parts = new Message($this->buffer[0]);
             $this->method = $parts->getRequestMethod();
             foreach($parts->getHeaders() as $k => $v) {
               $this->headers[strtolower($k)] = $v;
