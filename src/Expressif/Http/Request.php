@@ -34,7 +34,6 @@ namespace Expressif\Http {
      */
     public function emit($event, array $args = []) {
       if ($event === 'data') {
-        echo '<< ' . $args[0];
         $this->buffer .= $args[0];
         if ($this->body === false) {
           // headers are not already parsed
